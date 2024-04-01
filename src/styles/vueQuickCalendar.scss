@@ -1,0 +1,32 @@
+
+::v-deep.pc-vue-quick-calendar {
+  border: unset!important;
+  max-width: 300px!important;
+}
+::v-deep.pc-vue-quick-calendar header h1 {
+  color: #FFFFFF!important;
+  font-size: 16px!important;
+  width: 130px!important;
+}
+::v-deep.pc-vue-quick-calendar ul {
+  padding: 0!important;
+  justify-content: center!important;
+}
+::v-deep.pc-vue-quick-calendar ul li {
+  width: 40px!important;
+  height: 35px!important;
+  margin: 0!important;
+}
+::v-deep.pc-vue-quick-calendar ul li.weeks {
+  font-size: 14px!important;
+}
+::v-deep.pc-vue-quick-calendar ul li.day {
+  font-size: 14px!important;
+}
+::v-deep.pc-vue-quick-calendar ul li.day.isWeekend {
+  opacity: 1!important;
+}
+::v-deep.pc-vue-quick-calendar ul li.day.isNext,
+::v-deep.pc-vue-quick-calendar ul li.day.isPrep{
+  opacity: 0.3!important;
+}

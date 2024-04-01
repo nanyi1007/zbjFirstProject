@@ -1,0 +1,79 @@
+::v-deep.el-table th.el-table__cell {
+  font-size: 14px;
+  font-weight: bold;
+}
+::v-deep .el-table {
+  color: #ffffff;
+  border-top: 1px solid #2B7CB5;
+  border-left: 1px solid #2B7CB5;
+  border-bottom: 1px solid #2B7CB5;
+}
+::v-deep .el-table th {
+  background: rgba(12, 112, 189, 0.3);
+}
+::v-deep .el-table tr {
+  background-color: transparent;
+}
+::v-deep .el-table .el-table__cell {
+  padding: 5px 0!important;
+}
+::v-deep .el-table thead {
+  color: #ffffff;
+  font-weight: 500;
+}
+::v-deep .el-table th.el-table__cell {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  padding: 10px 0 !important;
+  border-right: 1px solid #2B7CB5;
+  border-bottom: 1px solid transparent;
+}
+::v-deep .el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell {
+  background-color: transparent;
+}
+::v-deep  .el-table, .el-table__expanded-cell {
+  background-color: transparent;
+}
+::v-deep  .el-table__empty-block {
+  border-right: 1px solid #2B7CB5;
+  border-top: 1px solid #2B7CB5;
+}
+
+//::v-deep .el-table tr {
+//  background-color: transparent!important;
+//}
+::v-deep  .el-table--enable-row-transition .el-table__body td, .el-table .cell{
+  background-color: transparent;
+  border-right: 1px solid #2B7CB5;
+  border-top: 1px solid #2B7CB5;
+
+}
+
+/**
+改变边框颜色
+ */
+/**
+改变表格内竖线颜色
+ */
+
+/**
+改变表格内行线颜色
+ */
+::v-deep .el-table  td, .el-table th.is-leaf  {
+  border-bottom: 1px solid rgba(12, 112, 189, 0.3)!important;
+}
+
+::v-deep .el-table thead tr th{
+  border-color: rgba(12, 112, 189, 0.3);
+}
+/*改变外边框颜色*/
+.el-table td, .el-table th.is-leaf,.el-table--border, .el-table--group{
+  border-color: rgba(12, 112, 189, 0.3);
+}
+.el-table--border::after, .el-table--group::after, .el-table::before{
+  background-color: rgba(12, 112, 189, 0.3);
+}
+::v-deep.current-row {
+  background: rgba(12, 112, 189, 0.7)!important;
+}

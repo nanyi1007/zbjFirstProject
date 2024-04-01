@@ -1,6 +1,10 @@
 <template>
   <div class="header-box">
-    <div class="system-name">虚拟电厂</div>
+    <div class="system-name">虚拟电厂运营管理系统</div>
+    <div class="user-info">
+      <span class="user-name"><i class="el-icon-user" />{{ userName }}</span>
+      <span class="exit-system" @click="exitSystem">退出</span>
+    </div>
   </div>
 </template>
 
@@ -9,7 +13,8 @@ export default {
   name: 'Header',
   data() {
     return {
-      title: ''
+      title: '',
+      userName: ''
     }
   },
   watch: {
@@ -20,12 +25,16 @@ export default {
       immediate: true
     }
   },
+  created() {
+    this.userName = JSON.parse(sessionStorage.getItem('userInfo'))?.staffNo
+  },
   methods: {
-    updateDateTime() {
-      // 获取当前时间和日期
-      const dateObj = new Date()
-      this.date = dateObj.toLocaleDateString()
-      this.time = dateObj.toLocaleTimeString()
+    exitSystem() {
+      this.$store.dispatch('user/logout', {}).then(() => {
+        this.$router.push({ path: '/login' })
+      }).catch(() => {
+
+      })
     }
   }
 }
@@ -34,70 +43,35 @@ export default {
 <style scoped lang="scss">
 .header-box {
   width: 100%;
-  height: 90px;
-  background-image: url("../../../assets/images/header.png");
+  height: 118px;
+  line-height: 100px;
+  background-image: url("../../../assets/images/home.png");
   background-size: 100% 100%;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   position: relative;
-  // background-image: url("~@/assets/images/system_header_bg.png");
-  // background-size: 100% 100%;
   background-repeat: no-repeat;
+  text-align: center;
   .system-name {
-    // font-size: 37px;
-    // line-height: 1.5;
-    // background: linear-gradient(to bottom, #fff, #7ed7fb);
-    // background-clip: text;
-    // color: transparent;
-    // text-align: center;
-
-    position: absolute;
-    top: 59%;
-    left: 49.7%;
-    transform: translate(-50%,-50%);
-    font-size: 39px;
-    font-family: Source Han Sans CN;
-    font-weight: 400;
+    font-size: 36px;
+    font-family: SourceHanSansSC;
+    font-weight: 500;
     color: #DBE5FA;
-    //text-shadow: 0 2px 2px rgba(10,68,134,0.67);
-    background: linear-gradient(0deg, #7ED7FB 0%, #FFFFFF 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    text-shadow: 0 5px 10px rgba(6,69,77,0.61);
+    letter-spacing: 0.1em;
   }
-  img {
-    width: 100%;
-    height: 10vh;
-  }
-  .btnOrDate {
-    color: #fff;
-    height: 100%;
+  .user-info {
     position: absolute;
-    top: 1.5vh;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    .exit-box {
-      display: flex;
-      margin-right: 30px;
-      cursor: pointer;
-      img {
-        width: 3vh;
-        height: 3vh;
-      }
-      &:hover div{
-        color: #409EFF;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%,-50%);
+    .user-name {
+      margin-right: 20px;
+      .el-icon-user {
+        margin-right: 5px;
       }
     }
-    .date-info-box {
-      .time{
-        font-size: 2.2vh;
-        margin: 5px 0;
-      }
-      .date {
-        font-size: 2.2vh;
-        margin: 5px 0;
-      }
+    .exit-system:hover {
+      color: #00D7FE;
+      cursor: pointer;
     }
   }
 }

@@ -6,12 +6,9 @@
       </el-header>
       <el-container class="in-el-container">
         <el-main>
-          <sidebar class="sidebar-container" v-if="isShowSidebar"/>
-          <div :class="{'show-sidebar': !isShowSidebar}" class="main-container">
-            <transition name="main" mode="out-in">
-              <router-view />
-            </transition>
-          </div>
+          <transition name="main" mode="out-in">
+            <SidebarMenu />
+          </transition>
         </el-main>
       </el-container>
     </el-container>
@@ -21,22 +18,16 @@
 <script>
 
 import layoutHeader from './components/header/header'
-import { Sidebar } from './components'
+import SidebarMenu from './sidebarMenu'
 export default {
   name: 'Layout',
   components: {
     layoutHeader,
-    Sidebar
+    SidebarMenu
   },
   data() {
     return {
       isShowSidebar: true
-    }
-  },
-  watch: {
-    // 监听路由变化
-    $route(to) {
-      this.isShowSidebar = to.meta.isShowSidebar !== false;
     }
   },
   created() {
@@ -69,12 +60,12 @@ html, body, #loyout, .el-container, #asideNav, ul.el-menu {
 #loyout {
   width: 100%;
   height: 100%;
-  background-image: url("~@/assets/images/bg.png");
+  background-image: url("~@/assets/images/bg1.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
   .el-header {
-    height: 90px !important;
+    height: 115px !important;
     padding: 0 !important;
   }
   .el-container {
@@ -87,7 +78,7 @@ html, body, #loyout, .el-container, #asideNav, ul.el-menu {
     // padding: 0 10px;
   }
   .main-container {
-    padding: 20px;
+    padding: 20px 20px 20px 0px;
   }
   .show-sidebar {
     margin-left: 0;

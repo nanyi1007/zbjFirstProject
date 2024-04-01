@@ -5,7 +5,6 @@
     transition: margin-left .28s;
     margin-left: $sideBarWidth;
     position: relative;
-    border: 1px solid white;
   }
 
   .sidebar-container {
@@ -68,12 +67,7 @@
       height: 100%;
       width: 100% !important;
     }
-    .el-submenu__title {
-      font-size: 17px !important; //父节点字体大小
-    }
-    .el-menu-item {
-      font-size: 17px !important; //首页字体大小
-    }
+
     // menu hover
     .submenu-title-noDropdown,
     .el-submenu__title {
@@ -90,8 +84,7 @@
     & .el-submenu .el-menu-item {
       min-width: $sideBarWidth !important;
       background-color: $subMenuBg !important;
-      padding: 0 60px !important;
-      font-size: 15px !important; // 子节点字体大小
+
       &:hover {
         background-color: $subMenuHover !important;
       }

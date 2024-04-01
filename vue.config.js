@@ -25,7 +25,7 @@ module.exports = {
    * Detail: https://cli.vuejs.org/config/#publicpath
    */
   // publicPath: '/',
-  publicPath: '/xndc-web/',
+  publicPath: '/xndc/',
   outputDir: 'web',
   assetsDir: 'static',
   lintOnSave: process.env.NODE_ENV === 'development',

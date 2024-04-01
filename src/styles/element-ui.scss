@@ -14,7 +14,9 @@
 .el-upload__input {
   display: none;
 }
-
+.el-checkbox {
+  color: #FFFFFF;
+}
 
 // to fixed https://github.com/ElemeFE/element/issues/2461
 .el-dialog {
@@ -50,4 +52,290 @@
 
 .el-main{
   padding: 0;
+}
+.el-link {
+  margin: 0 5px;
+}
+.el-message-box__btns .el-button {
+  color: #222222;
+}
+
+
+/*按钮样式*/
+
+.el-button{
+  padding: 10px 30px;
+  background: transparent;
+  border: 1px solid #0396EA;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.el-button:hover{
+  color: #FFFFFF;
+  background: #0396EA;
+  border: 1px solid #0396EA;
+}
+.el-button:focus {
+  background: transparent;
+  border: 1px solid #0396EA;
+}
+.el-button--primary, .el-button--primary:focus, .el-button--primary:hover {
+  border-radius: 5px;
+  background: #0396EA;
+}
+.el-button+.el-button {
+  margin-left: 15px;
+}
+
+/*分页公共样式*/
+.el-pagination__total {
+  color: #FFFFFF;
+}
+.el-pagination.is-background .btn-prev {
+  background-color: #093B75;
+  color: #f4f4f5;
+}
+.el-pagination.is-background .btn-next {
+  background-color: #093B75;
+  color: #f4f4f5;
+}
+.el-pagination.is-background .el-pager li {
+  background-color: transparent;
+  color: #FFFFFF;
+}
+
+/*弹窗公共样式*/
+.el-dialog {
+  background-color: #0C2463 !important;
+  transform: none;
+  left: 0;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 8px;
+
+  .el-dialog__header {
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #0396EA;
+    padding: 0 20px;
+    border-radius: 8px 8px 0 0;
+
+    .el-dialog__title,
+    .el-dialog__close {
+      color: #fff;
+      font-size: 18px;
+      margin: 10px;
+    }
+
+    .el-dialog__headerbtn {
+      top: 5px;
+    }
+  }
+
+  .el-dialog__body {
+    background: #0C2463 !important;
+    padding: 20px !important;
+    font-size: 16px;
+    color: #FFFFFF;
+  }
+
+  .el-dialog__footer {
+    .dialog-footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .el-button {
+        border-radius: 6px;
+        margin: 0 20px;
+      }
+    }
+  }
+}
+
+/*表单*/
+.el-form-item__label {
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.el-form-item__content .el-select, .el-form-item__content .el-cascader {
+  width: 100%;
+}
+/*单选框*/
+.el-radio {
+  color: #E2EBF1;
+}
+/*树公共样式*/
+.el-tree-node__expand-icon {
+  color: #FFFFFF;
+}
+.el-tree {
+  color: #ffffff;
+  background: transparent;
+  height: 100%;
+  overflow: auto;
+}
+.el-tree-node:focus > .el-tree-node__content {
+  background: transparent;
+}
+.el-tree-node__content:hover,
+.el-tree-node.is-current > .el-tree-node__content {
+  background: #0096e8;
+}
+.el-tree-node__label {
+  font-size: 16px;
+}
+.el-tree-node__content {
+  margin-bottom: 10px;
+}
+
+// 输入框和日期控件
+.el-input__inner {
+  color: #ffffff;
+}
+.el-input__inner {
+  background: transparent;
+  border-color: #0396EA;
+  &:hover {
+    border-color: #2670e0;
+  }
+}
+.el-picker-panel.el-date-picker.el-popper {
+  background: #1B2553;
+  border-color: #1B2553;
+
+  .popper__arrow {
+    border-bottom-color: #1B2553;
+  }
+
+  .popper__arrow::after {
+    border-bottom-color: #1B2553;
+  }
+}
+.el-input.is-disabled .el-input__inner {
+  background-color: transparent;
+}
+.el-picker-panel__footer {
+  background: #1B2553;
+  border-color: #1B2553;
+}
+.el-picker-panel__body {
+  background: #1B2553;
+}
+.el-range-input {
+  color: white !important;
+  background-color: transparent;
+}
+.el-date-editor .el-range-separator {
+  color: #FFFFFF;
+}
+.el-date-table td.in-range div, .el-date-table td.in-range div:hover, .el-date-table.is-week-mode .el-date-table__row.current div, .el-date-table.is-week-mode .el-date-table__row:hover div{
+  background-color: rgb(20, 13, 85) !important;
+}
+.el-picker-panel {
+  border: 0 !important;
+}
+.el-time-panel, .el-picker-panel {
+  background: #1B2553 !important;
+  border-color: #1B2553;
+  .el-time-spinner__item {
+    color: white;
+  }
+}
+
+.el-time-spinner__item.active:not(.disabled) {
+  color: rgb(31,113,255) !important;
+}
+.el-date-picker__header-label {
+  color: #fff;
+}
+
+.el-month-table td .cell {
+  color: #fff;
+}
+
+.el-date-table th {
+  color: #fff;
+}
+
+.el-picker-panel {
+  color: #fff !important;
+}
+
+.el-picker-panel__icon-btn {
+  color: #fff !important;
+}
+.el-picker-panel__link-btn {
+  padding: 7px 15px;
+}
+.el-popper .popper__arrow::after {
+  border-top-color: #1B2553;
+}
+.el-popper .popper__arrow {
+  border-top-color: #1B2553;
+}
+
+// 确认删除按钮样式
+.el-message-box {
+  background: #121B43;
+  border: 0;
+}
+
+.el-message-box__header {
+  background: #202B61;
+}
+
+.el-message-box__title {
+  color: #FFFFFF;
+}
+
+.el-message-box__message p {
+  color: #FFFFFF;
+}
+.el-message-box__btns .el-button {
+  color: #FFFFFF;
+}
+
+// 供电单位下拉框
+.el-select-dropdown {
+  border: 0
+}
+.el-select-dropdown__item {
+  color: #FFFFFF;
+}
+.el-select-dropdown__list {
+  background-color: #1B2553;
+}
+.el-select-dropdown__item.hover, .el-select-dropdown__item:hover {
+  background-color: transparent;
+  color: #0396EA;
+}
+.el-scrollbar__wrap {
+  margin-bottom: -8px !important;
+  margin-right: -8px !important;
+}
+
+
+.el-select-dropdown.is-multiple .el-select-dropdown__item.selected.hover, .el-select-dropdown__item.selected {
+  background-color: transparent !important;
+}
+.el-tag.el-tag--info {
+  background-color: transparent;
+  border-color: #409EFF;
+  color: #FFF;
+  font-size: 14px;
+}
+.el-select .el-tag__close.el-icon-close {
+  background-color: transparent;
+  color: #FFF;
+}
+
+
+
+.el-time-spinner__item:hover {
+  background-color: transparent !important;
+  color: #0396EA;
 }

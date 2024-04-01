@@ -1,0 +1,69 @@
+::v-deep .el-table {
+  border-top: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+  color: #ffffff;
+  font-size: 14px;
+}
+::v-deep .el-table th {
+  background-color: #0396EA;
+  border-right: 1px solid #FFFFFF;
+  color: #ffffff;
+}
+::v-deep  .el-table th > .cell {
+  font-weight: 400 !important;
+}
+::v-deep .el-table tr {
+  background-color: transparent;
+}
+::v-deep .el-table thead {
+  color: #ffffff;
+  font-weight: 500;
+}
+::v-deep .el-table th.el-table__cell {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+::v-deep .el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell {
+  background-color: transparent;
+}
+::v-deep  .el-table, .el-table__expanded-cell {
+  background-color: transparent;
+}
+
+::v-deep .el-table tr {
+  background-color: transparent!important;
+}
+::v-deep  .el-table--enable-row-transition .el-table__body td, .el-table .cell{
+  background-color: transparent;
+}
+/**
+改变边框颜色
+*/
+/**
+改变表格内竖线颜色
+ */
+::v-deep .el-table td.el-table__cell{
+  border-right: 1px solid #FFFFFF;
+}
+/**
+改变表格内行线颜色
+ */
+::v-deep .el-table  td, .el-table th.is-leaf  {
+  border-bottom: 1px solid #FFFFFF !important;
+}
+
+::v-deep .el-table thead tr th{
+  border-color: #FFFFFF;
+}
+/*改变外边框颜色*/
+.el-table td, .el-table th.is-leaf,.el-table--border, .el-table--group{
+  border-color: #FFFFFF;
+}
+.el-table--border::after, .el-table--group::after, .el-table::before{
+  background-color: #FFFFFF;
+}
+::v-deep .el-table__empty-block {
+  width: 100% !important;
+  border-right: 1px solid #FFFFFF;
+}
