@@ -28,7 +28,8 @@ module.exports = {
   publicPath: '/xndc/',
   outputDir: 'web',
   assetsDir: 'static',
-  lintOnSave: process.env.NODE_ENV === 'development',
+  // lintOnSave: process.env.NODE_ENV === 'development',
+  lintOnSave: process.env.NODE_ENV === 'production',
   productionSourceMap: false,
   devServer: {
     port: port,

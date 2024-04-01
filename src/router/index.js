@@ -133,44 +133,44 @@ export const constantRoutes = [
       // }
     ]
   },
-  // {
-  //   path: '/accessManagement',
-  //   component: Layout,
-  //   redirect: '/accessManagement/applyForAccess',
-  //   meta: { title: '虚拟电厂接入管理', icon: '', isShowSidebar: true },
-  //   children: [
-  //     {
-  //       path: 'applyForAccess',
-  //       name: 'applyForAccess',
-  //       component: () => import('@/views/accessManagement/applyForAccess'),
-  //       meta: { title: '虚拟电厂接入申请', icon: '', isShowSidebar: true }
-  //     },
-  //     {
-  //       path: 'applyForAuditing',
-  //       name: 'applyForAuditing',
-  //       component: () => import('@/views/accessManagement/applyForAuditing'),
-  //       meta: { title: '虚拟电厂接入审核', icon: '', isShowSidebar: true }
-  //     },
-  //     {
-  //       path: 'resourceVerification',
-  //       name: 'resourceVerification',
-  //       component: () => import('@/views/accessManagement/resourceVerification'),
-  //       meta: { title: '虚拟电厂资源核查', icon: '', isShowSidebar: true }
-  //     },
-  //     {
-  //       path: 'ExitApplication',
-  //       name: 'ExitApplication',
-  //       component: () => import('@/views/accessManagement/ExitApplication'),
-  //       meta: { title: '虚拟电厂退出申请', icon: '', isShowSidebar: true }
-  //     },
-  //     {
-  //       path: 'ExitManagement',
-  //       name: 'ExitManagement',
-  //       component: () => import('@/views/accessManagement/ExitManagement'),
-  //       meta: { title: '虚拟电厂退出管理', icon: '', isShowSidebar: true }
-  //     }
-  //   ]
-  // },
+  {
+    path: '/accessManagement',
+    component: Layout,
+    redirect: '/accessManagement/applyForAccess',
+    meta: { title: '虚拟电厂接入管理', icon: '', isShowSidebar: true },
+    children: [
+      {
+        path: 'applyForAccess',
+        name: 'applyForAccess',
+        component: () => import('@/views/accessManagement/applyForAccess'),
+        meta: { title: '虚拟电厂接入申请', icon: '', isShowSidebar: true }
+      },
+      {
+        path: 'applyForAuditing',
+        name: 'applyForAuditing',
+        component: () => import('@/views/accessManagement/applyForAuditing'),
+        meta: { title: '虚拟电厂接入审核', icon: '', isShowSidebar: true }
+      },
+      {
+        path: 'resourceVerification',
+        name: 'resourceVerification',
+        component: () => import('@/views/accessManagement/resourceVerification'),
+        meta: { title: '虚拟电厂资源核查', icon: '', isShowSidebar: true }
+      },
+      {
+        path: 'ExitApplication',
+        name: 'ExitApplication',
+        component: () => import('@/views/accessManagement/ExitApplication'),
+        meta: { title: '虚拟电厂退出申请', icon: '', isShowSidebar: true }
+      },
+      {
+        path: 'ExitManagement',
+        name: 'ExitManagement',
+        component: () => import('@/views/accessManagement/ExitManagement'),
+        meta: { title: '虚拟电厂退出管理', icon: '', isShowSidebar: true }
+      }
+    ]
+  },
   // {
   //   path: '/aggregationOptimization',
   //   component: Layout,
